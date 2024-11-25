@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fishing Quizz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <header class="bg-primary text-white text-center py-4">
+    <h1>Quizz de Pesca</h1>
+    <p>Jogo voltado para testar seus conhecimentos sobre pescaria!</p>
+  </header>
+
+  <main class="container mt-4">
+    <form id="form">
+      <section>
+        <h2 class="text-center">Perguntas</h2>
+
+        <!-- Pergunta 1 -->
+        <div class="form-group">
+          <label>1. Qual o maior peixe de água doce do Brasil?</label>
+          <div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pergunta1" value="Dourado" required>
+              <label class="form-check-label">Dourado</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pergunta1" value="Pirarucu">
+              <label class="form-check-label">Pirarucu</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pergunta1" value="Pirarara">
+              <label class="form-check-label">Pirarara</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pergunta1" value="Pintado">
+              <label class="form-check-label">Pintado</label>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Pergunta 2 -->
+        <div class="form-group">
+            <label>2. Qual é o nome científico do Tucunaré?</label>
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta2" value="Cichla" required>
+                <label class="form-check-label">Cichla ocellaris</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta2" value="Arapaima">
+                <label class="form-check-label">Arapaima gigas</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta2" value="Pygocentrus">
+                <label class="form-check-label">Pygocentrus nattereri</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta2" value="Colossoma">
+                <label class="form-check-label">Colossoma macropomum</label>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- Pergunta 3 -->
+        <div class="form-group">
+            <label>3. Qual é a melhor hora do dia para pescar, considerando a atividade dos peixes?
+            </label>
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta3" value="meio" required>
+                <label class="form-check-label">No meio da tarde</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta3" value="amanhecer">
+                <label class="form-check-label">Ao amanhecer e no entardecer</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta3" value="noite">
+                <label class="form-check-label">Durante a noite, quando está mais fresco</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta3" value="forte">
+                <label class="form-check-label">Ao meio-dia, quando o sol está mais forte</label>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- Pergunta 4 -->
+        <div class="form-group">
+            <label>4. O Dourado é conhecido popularmente como "Rei do Rio". Qual característica justifica esse apelido?</label>
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta4" value="dourada" required>
+                <label class="form-check-label">Sua beleza e coloração dourada</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta4" value="força">
+                <label class="form-check-label">Sua força e habilidade de luta ao ser fisgado</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta4" value="tamanho">
+                <label class="form-check-label">Seu tamanho gigante em comparação a outros peixes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pergunta4" value="profundas">
+                <label class="form-check-label">Sua capacidade de nadar em águas profundas</label>
+              </div>
+            </div>
+          </div>
+
+        
+      </section>
+
+      <button type="submit" class="btn btn-success btn-block">Enviar Respostas</button>
+    </form>
+
+    <section id="result" class="mt-4" style="display: none;">
+      <p id="score" class="text-center"></p>
+      <p id="feedback" class="text-center"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
