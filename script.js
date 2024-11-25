@@ -1,6 +1,8 @@
+//evento de submit
 document.getElementById('form').addEventListener('submit', function (event) {
+
+    //evita recarregar
     event.preventDefault();
-  
 
     //objeto com respostas corretas de cada pergunta
     const respostasCorretas = {
@@ -10,23 +12,22 @@ document.getElementById('form').addEventListener('submit', function (event) {
       pergunta4: "dourada",
     };
   
-    // pontuacao
+    // variavel pontuacao
     let score = 0;
   
-    //
-    Object.keys(respostasCorretas).forEach(question => {
-      const selected = document.querySelector(`input[name="${question}"]:checked`);
-      if (selected && selected.value === respostasCorretas[question]) {
+    //verifica se a resposta é correta ou errada
+    Object.keys(respostasCorretas).forEach(pergunta => {
+      const selected = document.querySelector(`input[name="${pergunta}"]:checked`);
+      if (selected && selected.value === respostasCorretas[pergunta]) {
         score++;
       }
     });
   
-    //
+    // textos de resultado
     const resultSection = document.getElementById('result');
     const resultScore = document.getElementById('score');
     const resultFeedbackMensagem = document.getElementById('feedback');
   
-    //
     resultScore.textContent = `Você acertou ${score} de ${Object.keys(respostasCorretas).length} perguntas.`;
   
     if (score === Object.keys(respostasCorretas).length) {
@@ -38,5 +39,6 @@ document.getElementById('form').addEventListener('submit', function (event) {
     }
   
     resultSection.style.display = 'block';
+    
   });
   
